@@ -12,6 +12,6 @@
 | start previously stopped container | docker start containerid |
 | docker running containers history | docker ps -a |
 | tag docker for specific version| docker tag sourceimage:tagversion codewithashish/targetimage:version|
-| push tagged version to docker hub | docker push codewithashish/angularrepo:angulardockercontainer|
+| push tagged version to docker hub | docker push codewithashish/targetimage:version|
 
 ## here codewithashish is a dockerid
