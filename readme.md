@@ -6,6 +6,7 @@
 | pull specific version | docker pull containername:versionname(tag name) |
 | pull and run docker container | docker run -d containername |
 | run docker container in specific port | docker run --name angulardockercontainer -d -p 8088:80 angulardockercontainer|
+| create docker container | docker build -t containername .|
 | run docker container | docker run -d containername |
 | list all running container | docker ps |
 | stop any existing running container | docker stop containerid |
