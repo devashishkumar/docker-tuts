@@ -11,12 +11,9 @@
 
 | Purpose | Command |
 | ------ | ------ |
-| docker pull from repo | docker pull containername |
-| pull specific version | docker pull containername:versionname(tag name) |
-| pull and run docker container from public repo | docker run -d containername |
+| create docker container | docker build -t containername .|
 | docker run in interactive mode| docker run -it -p 4444:4444 angulardockercontainer|
 | docker run in detached mode| docker run -d -p 4444:4444 angulardockercontainer|
-| create docker container | docker build -t containername .|
 | run docker container | docker run -d containername |
 | remove docker image | docker rmi  imageid |
 | list all running container | docker ps |
@@ -24,10 +21,6 @@
 | stop any existing running container | docker stop containerid |
 | start previously stopped container | docker start containerid |
 | docker running containers history | docker ps -a |
-| tag docker for specific version| docker tag sourceimage:tagversion codewithashish/targetimage:version|
-| push tagged version to docker hub | docker push codewithashish/targetimage:version|
-
-### here codewithashish is a docker-hub dockerid
 
 
 ### Docker containers trouble shooting
@@ -39,7 +32,6 @@
 | run container with the different name | docker run -d -p9090:8080 --name newname actualcontainername |
 | enter into any particular container directory (containerid) | docker exec -it containerid /bin/bash |
 | enter into any particular container directory (containername) | docker exec -it containername /bin/bash |
-
 
 ### docker run Vs docker start
 
@@ -65,3 +57,17 @@
 | ------ | ------ |
 | docker compose | docker-compose -f filename.yaml up |
 | docker compose to stop existing container | docker-compose -f filename.yaml down |
+
+
+### push/pull images to/from docker hub
+
+| Purpose | Command |
+| ------ | ------ |
+| docker pull from repo | docker pull containername |
+| pull specific version | docker pull containername:versionname(tag name) |
+| pull and run docker container with single command from public repo | docker run -d containername |
+| tag image for specific version | docker tag sourceimage:tagversion codewithashish/targetimage:version|
+| push tagged version to docker hub | docker push codewithashish/targetimage:version|
+| pull tagged version from docker hub | docker pull codewithashish/targetimage:version|
+
+### here codewithashish is a docker-hub dockerid
