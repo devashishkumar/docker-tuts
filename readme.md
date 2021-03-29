@@ -14,9 +14,11 @@
 | docker pull from repo | docker pull containername |
 | pull specific version | docker pull containername:versionname(tag name) |
 | pull and run docker container from public repo | docker run -d containername |
-| run docker container in specific port | docker run --name angulardockercontainer -d -p 8088:80 angulardockercontainer|
+| docker run in interactive mode| docker run -it -p 4444:4444 angulardockercontainer|
+| docker run in detached mode| docker run -d -p 4444:4444 angulardockercontainer|
 | create docker container | docker build -t containername .|
 | run docker container | docker run -d containername |
+| remove docker image | docker rmi  imageid |
 | list all running container | docker ps |
 | list all docker images | docker images |
 | stop any existing running container | docker stop containerid |
@@ -56,3 +58,10 @@
 | start mongo container with username/password | docker run -p 27017:27017 -d -e MONGO_INITDB_ROOT_USERNAME=ashish -e MONGO_INITDB_ROOT_PASSWORD=ashish --name mongodb --net mongo-network mongo|
 | start mongo container without username/password | docker run -p 27017:27017 -d --name mongodb --net mongo-network mongo|
 | check mongo container command status | docker logs e75eb688d6829f907e49ca6de0bfbe72f95c6f6c0e797bf20a22aed50a304b0c|
+
+### docker compose
+
+| Purpose | Command |
+| ------ | ------ |
+| docker compose | docker-compose -f filename.yaml up |
+| docker compose to stop existing container | docker-compose -f filename.yaml down |
